@@ -1,6 +1,6 @@
 /** Sub-path the site is served from on GitHub Pages; empty in dev. Also read by next.config.ts. */
 export const BASE_PATH =
-  process.env.NODE_ENV === "production" ? "/test-portfolio" : "";
+  process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 /**
  * Prefixes a public/ path with the basePath. Next only applies basePath to
