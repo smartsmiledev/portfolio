@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #111111;
+  --color-surface: #1a1a1a;
+  --color-surface-hover: #1e1e1e;
+  --color-border: #262626;
+
+  --color-gold: #d4af37;
+  --color-gold-bright: #f5c518;
+  --color-gold-dim: #8a7226;
+
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0a0;
+  --color-text-subtle: #6b6b6b;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dim);
+}
+
+@utility text-gradient-gold {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-bright) 0%,
+    var(--color-gold) 50%,
+    var(--color-gold-dim) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility glow-gold {
+  box-shadow: 0 0 40px -10px rgb(212 175 55 / 0.4);
+}
+
+/* Ambient radial light behind hero and section headings */
+@utility bg-radial-gold {
+  background-image: radial-gradient(
+    ellipse 60% 50% at 50% 0%,
+    rgb(212 175 55 / 0.12),
+    transparent 70%
+  );
+}
