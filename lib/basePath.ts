@@ -1,11 +1,12 @@
-/** Sub-path the site is served from on GitHub Pages; empty in dev. Also read by next.config.ts. */
+/**
+ * GitHub Pages serves this repository from /portfolio.
+ * Vercel and local development serve it from the root.
+ */
 export const BASE_PATH =
-  process.env.NODE_ENV === "production" ? "/portfolio" : "";
+  process.env.GITHUB_ACTIONS === "true" ? "/portfolio" : "";
 
 /**
- * Prefixes a public/ path with the basePath. Next only applies basePath to
- * next/link and the image optimizer, so plain <img>, <a> and unoptimized
- * next/image sources need it added manually.
+ * Prefix public asset paths when a base path is required.
  */
 export function asset(path: string) {
   return `${BASE_PATH}${path}`;
