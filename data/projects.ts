@@ -25,7 +25,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "commercepulse-ai",
-    code: "PROJ-01",
+    code: "PROJ-00",
     title: "CommercePulse AI",
     subtitle: "E-COMMERCE GROWTH INTELLIGENCE",
     industry: "E-commerce / Retail",
