@@ -30,11 +30,11 @@ export const projects: Project[] = [
     subtitle: "E-COMMERCE GROWTH INTELLIGENCE",
     industry: "E-commerce / Retail",
     projectType: "AI Analytics Platform",
-    // year: 2025,
+    // year: 2025, 
     summary:
       "A unified analytics platform that combines orders, products, customers and marketing performance, then layers an AI business analyst on top so teams can ask why a number moved rather than only seeing that it did.",
     features: [
-      "Revenue dashboard",
+      "Revenue dashboard", 
       "Order analytics",
       "Product performance",
       "Customer segmentation",
