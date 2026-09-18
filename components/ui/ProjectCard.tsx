@@ -11,7 +11,7 @@ type Props = {
 };
 
 export function ProjectCard({ project, onClick }: Props) {
-  const { code, title, subtitle, year, images } = project;
+  const { code, title, subtitle, images } = project;
   const cover = images[0] ?? null;
 
   return (
@@ -73,9 +73,9 @@ export function ProjectCard({ project, onClick }: Props) {
             {subtitle}
           </p>
         </div>
-        <span className="shrink-0 pt-0.5 font-mono text-sm text-text-subtle">
+        {/* <span className="shrink-0 pt-0.5 font-mono text-sm text-text-subtle">
           {year}
-        </span>
+        </span> */}
       </div>
     </article>
   );

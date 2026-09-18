@@ -13,7 +13,7 @@ export type Project = {
   subtitle: string;
   industry: string;
   projectType: string;
-  year: number;
+  // year: number;
   summary: string;
   features: string[];
   tags: string[];
@@ -24,121 +24,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "estateiq",
-    code: "PROJ-01",
-    title: "EstateIQ",
-    subtitle: "AI REAL ESTATE UNDERWRITING PLATFORM",
-    industry: "Commercial Real Estate",
-    projectType: "AI SaaS / Data Intelligence",
-    year: 2026,
-    summary:
-      "An AI-powered underwriting workspace for commercial real-estate investment teams. Analysts upload rent rolls, operating statements, property documents and market data, and the platform turns them into structured financial analysis — property metrics, risk indicators, AI-generated insights and investment reports instead of manual spreadsheet and PDF review.",
-    features: [
-      "Property portfolio dashboard",
-      "Excel/CSV/PDF ingestion",
-      "Automated document extraction",
-      "NOI, cap rate and cash-flow calculations",
-      "Property risk scoring",
-      "AI underwriting assistant",
-      "Comparable-property analysis",
-      "Scenario modeling",
-      "Investment memo generation",
-      "PDF report export",
-      "Role-based access",
-      "Audit history",
-    ],
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "Redis",
-      "RAG",
-      "AWS",
-    ],
-    images: ["/projects/estateiq-dashboard.png"],
-    caseStudy: {
-      situation:
-        "A fictional commercial-property investment firm evaluates dozens of acquisition opportunities each month. Analysts spend significant time converting inconsistent spreadsheets, rent rolls and PDFs into standardized underwriting models.",
-      challenges:
-        "Documents arrive in different formats, important assumptions can be buried in files, calculations need traceability, and investment teams need answers quickly without trusting an opaque AI-generated number.",
-      approach: [
-        "Built a centralized underwriting pipeline that extracts and validates property information before running deterministic financial calculations.",
-        "Used AI for document interpretation, anomaly detection and narrative analysis, while keeping the core financial calculations transparent and auditable.",
-      ],
-      decisions: [
-        "FastAPI handles the ingestion and analysis services; PostgreSQL stores normalized financial data.",
-        "Background workers process larger documents so uploads never block the interface.",
-        "React provides an interactive underwriting workspace over the structured results.",
-        "RAG grounds AI responses in the uploaded property documents, and AWS object storage keeps source files separate from structured data.",
-      ],
-      result:
-        "The sample implementation demonstrates how an investment team could reduce repetitive document processing, standardize underwriting and move from raw property files to an investment-ready analysis significantly faster.",
-    },
-  },
-  {
-    slug: "worksphere-365",
-    code: "PROJ-02",
-    title: "WorkSphere 365",
-    subtitle: "MICROSOFT 365 EMPLOYEE OPERATIONS HUB",
-    industry: "Enterprise / Corporate Operations",
-    projectType: "Microsoft 365 / Power Platform",
-    year: 2025,
-    summary:
-      "An enterprise employee-service environment built around the Microsoft ecosystem. Employees use one portal for requests, approvals, policies, documents and internal services instead of relying on email threads and shared mailboxes.",
-    features: [
-      "SharePoint employee portal",
-      "Employee onboarding",
-      "Purchase requests",
-      "PTO/request workflows",
-      "IT service requests",
-      "Document libraries",
-      "Approval workflows",
-      "Teams notifications",
-      "Employee knowledge assistant",
-      "Management dashboards",
-      "Role-based permissions",
-      "Audit trails",
-    ],
-    tags: [
-      "SharePoint Online",
-      "Power Apps",
-      "Power Automate",
-      "Microsoft Graph",
-      "Entra ID",
-      "Power BI",
-      "Azure Functions",
-      "React",
-    ],
-    images: ["/projects/worksphere-365-portal.png"],
-    caseStudy: {
-      situation:
-        "A fictional 500-person professional-services organization handles employee requests through shared mailboxes, Excel sheets and manually routed documents.",
-      challenges:
-        "Employees don't know request status, managers receive approval requests through different channels, documents become duplicated, and operations teams spend time manually updating records.",
-      approach: [
-        "Used Microsoft 365 as the foundation of the employee operations environment rather than replacing the organization's existing ecosystem.",
-        "Made SharePoint the information and document layer, with Power Apps handling structured employee requests.",
-        "Managed approvals and workflow automation through Power Automate.",
-      ],
-      decisions: [
-        "Entra ID provides identity and role-based access.",
-        "Teams adaptive notifications bring approvals into workflows people already use.",
-        "Microsoft Graph connects the custom services, and Azure Functions with Python handle functionality that exceeds low-code limits.",
-      ],
-      result:
-        "The demonstration illustrates how an organization could replace fragmented email-based processes with traceable digital workflows while continuing to use its existing Microsoft 365 environment.",
-    },
-  },
-  {
     slug: "commercepulse-ai",
-    code: "PROJ-05",
+    code: "PROJ-01",
     title: "CommercePulse AI",
     subtitle: "E-COMMERCE GROWTH INTELLIGENCE",
     industry: "E-commerce / Retail",
     projectType: "AI Analytics Platform",
-    year: 2025,
+    // year: 2025,
     summary:
       "A unified analytics platform that combines orders, products, customers and marketing performance, then layers an AI business analyst on top so teams can ask why a number moved rather than only seeing that it did.",
     features: [
@@ -186,13 +78,121 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "worksphere-365",
+    code: "PROJ-02",
+    title: "WorkSphere 365",
+    subtitle: "MICROSOFT 365 EMPLOYEE OPERATIONS HUB",
+    industry: "Enterprise / Corporate Operations",
+    projectType: "Microsoft 365 / Power Platform",
+    // year: 2025,
+    summary:
+      "An enterprise employee-service environment built around the Microsoft ecosystem. Employees use one portal for requests, approvals, policies, documents and internal services instead of relying on email threads and shared mailboxes.",
+    features: [
+      "SharePoint employee portal",
+      "Employee onboarding",
+      "Purchase requests",
+      "PTO/request workflows",
+      "IT service requests",
+      "Document libraries",
+      "Approval workflows",
+      "Teams notifications",
+      "Employee knowledge assistant",
+      "Management dashboards",
+      "Role-based permissions",
+      "Audit trails",
+    ],
+    tags: [
+      "SharePoint Online",
+      "Power Apps",
+      "Power Automate",
+      "Microsoft Graph",
+      "Entra ID",
+      "Power BI",
+      "Azure Functions",
+      "React",
+    ],
+    images: ["/projects/worksphere-365-portal.png"],
+    caseStudy: {
+      situation:
+        "A fictional 500-person professional-services organization handles employee requests through shared mailboxes, Excel sheets and manually routed documents.",
+      challenges:
+        "Employees don't know request status, managers receive approval requests through different channels, documents become duplicated, and operations teams spend time manually updating records.",
+      approach: [
+        "Used Microsoft 365 as the foundation of the employee operations environment rather than replacing the organization's existing ecosystem.",
+        "Made SharePoint the information and document layer, with Power Apps handling structured employee requests.",
+        "Managed approvals and workflow automation through Power Automate.",
+      ],
+      decisions: [
+        "Entra ID provides identity and role-based access.",
+        "Teams adaptive notifications bring approvals into workflows people already use.",
+        "Microsoft Graph connects the custom services, and Azure Functions with Python handle functionality that exceeds low-code limits.",
+      ],
+      result:
+        "The demonstration illustrates how an organization could replace fragmented email-based processes with traceable digital workflows while continuing to use its existing Microsoft 365 environment.",
+    },
+  },
+  {
+    slug: "estateiq",
+    code: "PROJ-03",
+    title: "EstateIQ",
+    subtitle: "AI REAL ESTATE UNDERWRITING PLATFORM",
+    industry: "Commercial Real Estate",
+    projectType: "AI SaaS / Data Intelligence",
+    // year: 2026,
+    summary:
+      "An AI-powered underwriting workspace for commercial real-estate investment teams. Analysts upload rent rolls, operating statements, property documents and market data, and the platform turns them into structured financial analysis — property metrics, risk indicators, AI-generated insights and investment reports instead of manual spreadsheet and PDF review.",
+    features: [
+      "Property portfolio dashboard",
+      "Excel/CSV/PDF ingestion",
+      "Automated document extraction",
+      "NOI, cap rate and cash-flow calculations",
+      "Property risk scoring",
+      "AI underwriting assistant",
+      "Comparable-property analysis",
+      "Scenario modeling",
+      "Investment memo generation",
+      "PDF report export",
+      "Role-based access",
+      "Audit history",
+    ],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "RAG",
+      "AWS",
+    ],
+    images: ["/projects/estateiq-dashboard.png"],
+    caseStudy: {
+      situation:
+        "A fictional commercial-property investment firm evaluates dozens of acquisition opportunities each month. Analysts spend significant time converting inconsistent spreadsheets, rent rolls and PDFs into standardized underwriting models.",
+      challenges:
+        "Documents arrive in different formats, important assumptions can be buried in files, calculations need traceability, and investment teams need answers quickly without trusting an opaque AI-generated number.",
+      approach: [
+        "Built a centralized underwriting pipeline that extracts and validates property information before running deterministic financial calculations.",
+        "Used AI for document interpretation, anomaly detection and narrative analysis, while keeping the core financial calculations transparent and auditable.",
+      ],
+      decisions: [
+        "FastAPI handles the ingestion and analysis services; PostgreSQL stores normalized financial data.",
+        "Background workers process larger documents so uploads never block the interface.",
+        "React provides an interactive underwriting workspace over the structured results.",
+        "RAG grounds AI responses in the uploaded property documents, and AWS object storage keeps source files separate from structured data.",
+      ],
+      result:
+        "The sample implementation demonstrates how an investment team could reduce repetitive document processing, standardize underwriting and move from raw property files to an investment-ready analysis significantly faster.",
+    },
+  },
+  {
     slug: "careconnect-ai",
     code: "PROJ-04",
     title: "CareConnect AI",
     subtitle: "HEALTHCARE OPERATIONS & PATIENT ENGAGEMENT",
     industry: "Healthcare",
     projectType: "Secure Full-Stack / AI Workflow",
-    year: 2025,
+    // year: 2025,
     summary:
       "A patient and clinic operations platform focused on scheduling, communication, intake and administrative automation. The project is as much about security, privacy and sensitive-data architecture as it is about features.",
     features: [
@@ -241,13 +241,68 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "documind",
+    slug: "buildflow-ai",
     code: "PROJ-05",
+    title: "BuildFlow AI",
+    subtitle: "CONSTRUCTION OPERATIONS PLATFORM",
+    industry: "Construction",
+    projectType: "Full-Stack SaaS / AI Operations",
+    // year: 2026,
+    summary:
+      "A unified operating platform for general contractors managing projects, subcontractors, budgets, schedules, change orders and project documentation. AI continuously analyzes operational data to identify schedule and cost risks before they surface in a monthly report.",
+    features: [
+      "Multi-project dashboard",
+      "Project scheduling",
+      "Budget vs. actual tracking",
+      "Subcontractor management",
+      "Change orders",
+      "RFIs",
+      "Document management",
+      "Invoice processing",
+      "Project timeline",
+      "AI project-risk detection",
+      "Automated weekly reports",
+      "Executive dashboards",
+      "Email/Teams notifications",
+    ],
+    tags: [
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Azure",
+      "Docker",
+    ],
+    images: ["/projects/buildflow-ai-dashboard.png"],
+    caseStudy: {
+      situation:
+        "A fictional regional contractor manages 25 active construction projects using spreadsheets, email and several disconnected systems.",
+      challenges:
+        "Project managers struggle to see cost overruns early. Change orders may exist in email while budgets live in spreadsheets and project documents exist elsewhere.",
+      approach: [
+        "Centralized project, budget, scheduling, subcontractor and document data into a unified operational model.",
+        "Developed dashboards around budget performance, schedule progress and overall project health.",
+        "Added an AI analysis service that monitors project activity and highlights potential cost and scheduling risks.",
+      ],
+      decisions: [
+        "React provides the operational interface; Python services handle financial calculations, document extraction and AI analysis.",
+        "PostgreSQL maintains transactional consistency and Redis supports asynchronous processing.",
+        "Containerized services deploy through an automated Azure CI/CD pipeline.",
+      ],
+      result:
+        "The hypothetical system shows how leadership could obtain earlier visibility into project risk, reduce fragmented workflows and give project managers one operational source of truth.",
+    },
+  },
+  {
+    slug: "documind",
+    code: "PROJ-06",
     title: "DocuMind",
     subtitle: "AI DOCUMENT INTELLIGENCE WORKSPACE",
     industry: "Legal / Consulting / Professional Services",
     projectType: "Generative AI / RAG",
-    year: 2026,
+    // year: 2026,
     summary:
       "An enterprise knowledge platform that understands thousands of contracts, reports, policies and business documents. Users don't simply chat with PDFs — they search, compare, classify and extract structured knowledge from an organization's document library.",
     features: [
@@ -296,13 +351,70 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "cloudops-ai",
+    code: "PROJ-07",
+    title: "CloudOps AI",
+    subtitle: "DEVOPS & CLOUD OBSERVABILITY PLATFORM",
+    industry: "SaaS / Technology",
+    projectType: "DevOps / Cloud Engineering / AIOps",
+    // year: 2026,
+    summary:
+      "A centralized engineering platform for deploying, monitoring and managing distributed cloud applications. Where the other projects demonstrate applications, this one covers how those applications actually run in production.",
+    features: [
+      "Service health dashboard",
+      "Deployment history",
+      "CI/CD visibility",
+      "Environment management",
+      "Infrastructure monitoring",
+      "Logs and metrics",
+      "Alert management",
+      "Incident timelines",
+      "Kubernetes workload visibility",
+      "Cloud-cost monitoring",
+      "AI log investigation",
+      "AI incident summaries",
+      "Deployment rollback",
+      "Infrastructure-as-code workflow",
+    ],
+    tags: [
+      "React",
+      "Python",
+      "Kubernetes",
+      "Terraform",
+      "GitHub Actions",
+      "Prometheus",
+      "OpenTelemetry",
+      "AWS / Azure",
+    ],
+    images: ["/projects/cloudops-ai.png"],
+    caseStudy: {
+      situation:
+        "A fictional SaaS company operates several React and Python services across development, staging and production environments.",
+      challenges:
+        "Engineers switch between CI/CD systems, cloud consoles, logs and monitoring products when investigating incidents, and deployment context is frequently disconnected from operational telemetry.",
+      approach: [
+        "Created a centralized engineering control plane that aggregates deployment, infrastructure, logging, metrics and observability data.",
+        "Correlated operational incidents with deployment events so engineers can investigate system behaviour from a single interface.",
+        "Used AI to summarize logs and incident context and shorten troubleshooting.",
+      ],
+      decisions: [
+        "Kubernetes provides container orchestration and Terraform defines reproducible infrastructure.",
+        "CI/CD pipelines automate testing and deployment.",
+        "OpenTelemetry standardizes application telemetry.",
+        "Python services aggregate operational information, and AI summarizes logs and incident context without autonomous control over production infrastructure.",
+      ],
+      result:
+        "The sample demonstrates a repeatable deployment architecture, improved operational visibility and faster incident investigation while keeping consequential production actions under engineer control.",
+    },
+  },
+  {
     slug: "fieldpilot-ai",
-    code: "PROJ-06",
+    code: "PROJ-08",
     title: "FieldPilot AI",
     subtitle: "INTELLIGENT FIELD SERVICE PLATFORM",
     industry: "HVAC / Plumbing / Maintenance / Home Services",
     projectType: "SaaS / Mobile / Voice AI",
-    year: 2025,
+    // year: 2025,
     summary:
       "A complete operating platform for businesses that dispatch technicians to customer locations — covering customer requests, dispatch, scheduling, on-site work and invoicing, with AI turning unstructured calls and voice notes into structured operational data.",
     features: [
@@ -353,12 +465,12 @@ export const projects: Project[] = [
   },
   {
     slug: "finsight",
-    code: "PROJ-07",
+    code: "PROJ-09",
     title: "FinSight",
     subtitle: "AI FINANCIAL PLANNING & FORECASTING PLATFORM",
     industry: "Finance / Corporate FP&A",
     projectType: "Data Engineering / AI Analytics",
-    year: 2025,
+    // year: 2025,
     summary:
       "A financial intelligence workspace that consolidates actual results, budgets and forecasts, and helps finance teams investigate variance through trusted calculations and natural-language reporting.",
     features: [
@@ -404,118 +516,6 @@ export const projects: Project[] = [
       ],
       result:
         "The sample implementation demonstrates a shorter reporting cycle, repeatable forecasting and management access to explanations without compromising financial calculation integrity.",
-    },
-  },
-  {
-    slug: "buildflow-ai",
-    code: "PROJ-03",
-    title: "BuildFlow AI",
-    subtitle: "CONSTRUCTION OPERATIONS PLATFORM",
-    industry: "Construction",
-    projectType: "Full-Stack SaaS / AI Operations",
-    year: 2026,
-    summary:
-      "A unified operating platform for general contractors managing projects, subcontractors, budgets, schedules, change orders and project documentation. AI continuously analyzes operational data to identify schedule and cost risks before they surface in a monthly report.",
-    features: [
-      "Multi-project dashboard",
-      "Project scheduling",
-      "Budget vs. actual tracking",
-      "Subcontractor management",
-      "Change orders",
-      "RFIs",
-      "Document management",
-      "Invoice processing",
-      "Project timeline",
-      "AI project-risk detection",
-      "Automated weekly reports",
-      "Executive dashboards",
-      "Email/Teams notifications",
-    ],
-    tags: [
-      "React",
-      "TypeScript",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "Redis",
-      "Azure",
-      "Docker",
-    ],
-    images: ["/projects/buildflow-ai-dashboard.png"],
-    caseStudy: {
-      situation:
-        "A fictional regional contractor manages 25 active construction projects using spreadsheets, email and several disconnected systems.",
-      challenges:
-        "Project managers struggle to see cost overruns early. Change orders may exist in email while budgets live in spreadsheets and project documents exist elsewhere.",
-      approach: [
-        "Centralized project, budget, scheduling, subcontractor and document data into a unified operational model.",
-        "Developed dashboards around budget performance, schedule progress and overall project health.",
-        "Added an AI analysis service that monitors project activity and highlights potential cost and scheduling risks.",
-      ],
-      decisions: [
-        "React provides the operational interface; Python services handle financial calculations, document extraction and AI analysis.",
-        "PostgreSQL maintains transactional consistency and Redis supports asynchronous processing.",
-        "Containerized services deploy through an automated Azure CI/CD pipeline.",
-      ],
-      result:
-        "The hypothetical system shows how leadership could obtain earlier visibility into project risk, reduce fragmented workflows and give project managers one operational source of truth.",
-    },
-  },
-  {
-    slug: "cloudops-ai",
-    code: "PROJ-09",
-    title: "CloudOps AI",
-    subtitle: "DEVOPS & CLOUD OBSERVABILITY PLATFORM",
-    industry: "SaaS / Technology",
-    projectType: "DevOps / Cloud Engineering / AIOps",
-    year: 2026,
-    summary:
-      "A centralized engineering platform for deploying, monitoring and managing distributed cloud applications. Where the other projects demonstrate applications, this one covers how those applications actually run in production.",
-    features: [
-      "Service health dashboard",
-      "Deployment history",
-      "CI/CD visibility",
-      "Environment management",
-      "Infrastructure monitoring",
-      "Logs and metrics",
-      "Alert management",
-      "Incident timelines",
-      "Kubernetes workload visibility",
-      "Cloud-cost monitoring",
-      "AI log investigation",
-      "AI incident summaries",
-      "Deployment rollback",
-      "Infrastructure-as-code workflow",
-    ],
-    tags: [
-      "React",
-      "Python",
-      "Kubernetes",
-      "Terraform",
-      "GitHub Actions",
-      "Prometheus",
-      "OpenTelemetry",
-      "AWS / Azure",
-    ],
-    images: ["/projects/cloudops-ai.png"],
-    caseStudy: {
-      situation:
-        "A fictional SaaS company operates several React and Python services across development, staging and production environments.",
-      challenges:
-        "Engineers switch between CI/CD systems, cloud consoles, logs and monitoring products when investigating incidents, and deployment context is frequently disconnected from operational telemetry.",
-      approach: [
-        "Created a centralized engineering control plane that aggregates deployment, infrastructure, logging, metrics and observability data.",
-        "Correlated operational incidents with deployment events so engineers can investigate system behaviour from a single interface.",
-        "Used AI to summarize logs and incident context and shorten troubleshooting.",
-      ],
-      decisions: [
-        "Kubernetes provides container orchestration and Terraform defines reproducible infrastructure.",
-        "CI/CD pipelines automate testing and deployment.",
-        "OpenTelemetry standardizes application telemetry.",
-        "Python services aggregate operational information, and AI summarizes logs and incident context without autonomous control over production infrastructure.",
-      ],
-      result:
-        "The sample demonstrates a repeatable deployment architecture, improved operational visibility and faster incident investigation while keeping consequential production actions under engineer control.",
     },
   },
 ];
