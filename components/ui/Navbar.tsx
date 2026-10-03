@@ -69,7 +69,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <a
-          href="#home"
+          href="/#home"
           className="font-display text-lg font-bold tracking-tight transition-colors hover:text-gold"
         >
           {initials}

@@ -31,7 +31,7 @@ export function Footer() {
           ))}
 
           <a
-            href="#home"
+            href="/#home"
             aria-label="Back to top"
             className="rounded-full border border-border p-2.5 text-text-muted transition-all hover:border-gold hover:text-gold"
           >

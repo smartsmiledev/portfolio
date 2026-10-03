@@ -18,7 +18,7 @@ export const profile = {
   socials: {
     github: "https://github.com/smartsmiledev",
     linkedin: "https://www.linkedin.com/in/fomo",
-    email: "shah@individualdev.com",
+    email: "contact@shahnewajislam.com",
   },
   cvUrl: "/Shah.pdf",
   // Name the file is saved as, rather than the "cv.pdf" the URL would give.
