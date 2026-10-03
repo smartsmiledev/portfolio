@@ -168,9 +168,9 @@ export function ProjectModal({ projects, initialIndex, onClose }: Props) {
                   <p className="mt-0.5 text-xs uppercase tracking-[0.18em] text-text-subtle">
                     {project.subtitle}
                   </p>
-                  <p className="mt-1 font-mono text-xs text-text-subtle">
+                  {/* <p className="mt-1 font-mono text-xs text-text-subtle">
                     {project.year}
-                  </p>
+                  </p> */}
                   <p className="mt-2 text-xs text-text-muted">
                     {project.industry}
                     <span className="mx-1.5 text-text-subtle">·</span>
